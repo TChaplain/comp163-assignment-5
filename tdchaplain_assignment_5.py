@@ -18,3 +18,36 @@ while current_number != 1:
 print(1)
 print("Steps:", step_count)
 print()
+
+# Test for divisors w user input
+print("=== Challenge 2: Prime Number Checker ===")
+current_number = int(input("Enter a number: "))
+print(f"Testing divisors from 2 to {current_number - 1}...")
+
+divisor = 2
+while divisor < current_number:
+    if current_number % divisor == 0:
+        print(current_number, "is not prime")
+        print(f"(divisible by {divisor})")
+        break
+    divisor = divisor + 1
+
+if divisor == current_number and current_number > 1:
+    print(current_number, "is prime!")
+print()
+
+# Challenge 3: Multiplication table
+print("=== Challenge 3: Multiplication Table ===")
+print("Multiplication Table:")
+
+print("    ", end="")
+for col in range(1, 11):
+    print(f"{col:4}", end="")
+print()
+
+for row in range(1, 11):
+    print(f"{row:2} |", end=" ")
+    for col in range(1, 11):
+        product = row * col
+        print(f"{product:4}", end="")
+    print()
